@@ -63,8 +63,15 @@ int main() {
     printSquare(7);
     printHollowSquare(8);
     printf("%d",countThrees(1234));
-    */
     printRomanNumerals(199);
+    printf("%d\n", isPalindrome(17771));
+    printf("%d\n", isPrime(7284));
+    listPrimePalindromes(50,1200);
+    printf("%.2f",findAngle(6 , 15));
+    */
+    //createArray(7);
+    //printArray(createArray(7),7);
+    printArray(fixArray(createArray(7),7),7);
 
     return 0;
 }

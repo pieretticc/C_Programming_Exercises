@@ -5,6 +5,7 @@
 #include "basics.h"
 #include <stdio.h>
 #include <math.h>
+#include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
@@ -689,3 +690,86 @@ void printRomanNumerals(int input) {
         printf(" \n");
     }
 }
+bool isPrime(const int input) {
+    if (input == 1 || input % 2 == 0) {
+        return false;
+    }
+    if (input == 2) {
+        return true;
+    }
+    for (int i = 3; i <= input / 2; i = i + 2) {
+        if (input % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+bool isPalindrome(const int input) {
+    int temp = input;
+    int numToCheck = 0;
+    while (temp != 0) {
+        numToCheck = (numToCheck * 10) + (temp % 10);
+        temp /= 10;
+    }
+    return numToCheck == input;
+}
+void listPrimePalindromes(int x, int y) {
+    //90
+    for (int i = x; i <= y; i++) {
+        if (isPalindrome(i) && isPrime(i)) {
+            printf("%d\n", i);
+        }
+    }
+}
+
+double findAngle(int hour, int minute) {
+    //91
+    hour = hour % 12;
+    minute = minute % 60;
+    double minuteAngle = ((double)minute * 6);
+    double hourAngle = ((double)hour + (double)minute / 60) * 30;
+    //printf("%.4f, %.4f\n", hourAngle, minuteAngle);
+    double totalAngle = hourAngle - minuteAngle;
+    if (totalAngle < 0) {
+        totalAngle *= -1;
+    }
+    if (totalAngle < 360 - totalAngle) {
+        return totalAngle;
+    }
+    return 360 - totalAngle;
+}
+
+int *createArray(int size) {
+    int *array = (int*)malloc(size * sizeof(int));
+    int input;
+    printf("Enter your %d elements in the Array: \n", size);
+    for (int i = 0; i < size; i++) {
+        scanf("%d",&array[i]);
+    }
+
+
+    return array;
+}
+void printArray(int *array, int size) {
+    printf("Elements in the array are: \n");
+    for (int i = 0; i < size; i++) {
+        printf("array[%d] = %d \n", i, array[i]);
+    }
+    removeArray(array);
+}
+void removeArray(int *array) {
+    free(array);
+}
+int *fixArray(int *array, int size) {
+    //124
+    for (int i = 0; i < size; i++) {
+        if (array[i] < 0) {
+            array[i] = 1;
+        }
+    }
+    return array;
+}
+
+
+
+

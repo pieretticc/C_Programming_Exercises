@@ -4,6 +4,7 @@
 
 #ifndef UNTITLED1_BASICS_H
 #define UNTITLED1_BASICS_H
+#include <stdbool.h>
 
 void printInfo();
 void printVersion();
@@ -67,4 +68,12 @@ void printHollowSquare(int size);
 int countThrees(int input);
 void getRomanNumeral(int input);
 void printRomanNumerals(int input);
+bool isPalindrome(int input);
+bool isPrime( int input);
+void listPrimePalindromes(int x, int y);
+double findAngle(int hour, int minute);
+int *createArray(int size);
+void printArray(int *array, int size);
+void removeArray(int *array);
+int *fixArray(int *array, int size);
 #endif //UNTITLED1_BASICS_H
