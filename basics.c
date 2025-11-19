@@ -6,6 +6,8 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
+#include <string.h>
+#include <time.h>
 
 void printInfo(){
     //problem #1
@@ -551,17 +553,139 @@ int sumOfDigits(int x) {
     }
     return sum;
 }
-void printPrimes() {
-    for (int i = 0; i < 100; i++) {
-        if (i % 20 == 0) {
+void printPrimes(int limit) {
+    //65
+    printf("Primes from 1 - %d are as follows:\n", limit);
+    int flag = 1; //0 means not prime, 1 means prime
+    int numOfPrimes = 0;
+    for (int i = 2; i <= limit; i++) {
+        flag = 1;
+        for (int j = 2; j <= i / 2 && flag == 1; j++) {
+            if (i % j == 0) {
+                flag = 0;
+            }
+        }
+        if (flag == 1) {
+            printf("%d ", i);
+            numOfPrimes++;
+        }
+        if (numOfPrimes % 10 == 0) {
             printf("\n");
         }
     }
 }
-
-
-
-
-
-
-
+void generateRandomNumbers(int count) {
+    //66
+    FILE *fptr = fopen("randomNumbers.txt", "w");
+    srand(time(NULL)); //insecure seed
+    fprintf(fptr , "%d\n", count);
+    for (int i = 0; i < count; i++) {
+        double r = (double) rand() / (RAND_MAX + 1.0);
+        r = r - 0.5;
+        printf("%.4f\n", r);
+        fprintf(fptr , "%.4f\n", r);
+    }
+    fclose(fptr);
+}
+void evaluatePowers(int x, int n) {
+    //67
+    double result = pow(x, n);
+    printf("You inputted %d and %d.\n%d ^^ %d = %f", x, n, x, n, result);
+}
+void printPowersOf2(int n) {
+    //68
+    printf("=======================================\n n      2 to power n        2 to power -n\n=======================================\n");
+    for (int i = 0; i <= n; i++) {
+        printf("%d              %.f                  %f \n", i, pow(2,i), pow(2,-i));
+    }
+    printf("=======================================\n");
+}
+void printAscii() {
+    //70
+    for (int i = 'A'; i <= 'z'; i++) {
+        if ((i >= 'A' && i <= 'Z') || (i >= 'a')) {
+            printf("[%d-%c] ", i, i);
+        }
+    }
+}
+void copyStringCount(char str1[]) {
+    //71
+    int str1Size = strlen(str1);
+    char str2[str1Size];
+    for (int i = 0; str1[i] != '\0'; i++) {
+        str2[i] = str1[i];
+    }
+    printf("Copied string: %s\n", str2);
+    printf("Size : %d\n", str1Size);
+}
+void printSquare(const int size) {
+    //80
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            printf("# ");
+        }
+        printf("\n");
+    }
+}
+void printHollowSquare(const int size) {
+    //81
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            if ((i > 0 && i < size-1) && (j > 0 && j < size-1)){
+                printf("  ");
+            } else {
+                printf("# ");
+            }
+        }
+        printf("\n");
+    }
+}
+int countThrees(int input) {
+    //83
+    int count = 0;
+    int temp = 0;
+    while (input != 0) {
+        temp = input % 10;
+        input /= 10;
+        if (temp == 3) {
+            count++;
+        }
+    }
+    return count;
+}
+void getRomanNumeral(int input) {
+    //85
+    while (input != 0) {
+        if (input >= 100) {
+            printf("C");
+            input -= 100;
+        } else if (input >= 50) {
+            printf("L");
+            input -= 50;
+        } else if (input >= 10) {
+            printf("X");
+            input -= 10;
+        } else if (input >= 9) {
+            printf("IX");
+            input -= 9;
+        } else if (input >= 5) {
+            printf("V");
+            input -= 5;
+        } else if (input >= 4) {
+            printf("IV");
+            input -= 4;
+        } else if (input >= 1) {
+            printf("I");
+            input -= 1;
+        }
+    }
+}
+void printRomanNumerals(int input) {
+    //driver code for 85
+    printf("Decimal Number          |           Roman Numeral\n ------------------------------------------------------\n");
+    for (int i = 0; i < input; i++) {
+        printf("%d                                  ", i);
+        getRomanNumeral(i);
+        printf(" \n");
+    }
+}

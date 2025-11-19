@@ -2,6 +2,7 @@
 #include <stdio.h>
 int main() {
     /*
+    //functions are commented and uncommented as needed to test
     printInfo();
     printVersion();
     bigprint();
@@ -52,7 +53,18 @@ int main() {
     printf("%d",leftShift(2));
     printf("%d \n",reverseNumber(42367));
     printf("%.2f \n",sinOfX(555));
-    */
     printf("%d ",sumOfDigits(456));
+    printPrimes(200);
+    generateRandomNumbers(50);
+    evaluatePowers(256, 0);
+    printPowersOf2(10);
+    printAscii();
+    copyStringCount("This is a test!");
+    printSquare(7);
+    printHollowSquare(8);
+    printf("%d",countThrees(1234));
+    */
+    printRomanNumerals(199);
+
     return 0;
 }

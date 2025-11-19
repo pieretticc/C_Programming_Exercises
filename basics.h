@@ -56,4 +56,15 @@ int leftShift(int x);
 int reverseNumber(int x);
 double sinOfX(int x);
 int sumOfDigits(int x);
+void printPrimes(int limit);
+void generateRandomNumbers(int count);
+void evaluatePowers(int x, int n);
+void printPowersOf2(int n);
+void printAscii();
+void copyStringCount(char str1[]);
+void printSquare(int size);
+void printHollowSquare(int size);
+int countThrees(int input);
+void getRomanNumeral(int input);
+void printRomanNumerals(int input);
 #endif //UNTITLED1_BASICS_H
