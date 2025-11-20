@@ -76,4 +76,9 @@ int *createArray(int size);
 void printArray(int *array, int size);
 void removeArray(int *array);
 int *fixArray(int *array, int size);
+int *replaceFirstElementArray(int *array, int size, int firstNum);
+void printPositionsArrayElements(int *array, int size);
+int smallestArrayValue(int *array, int size);
+int checkifSubstring(const char *needle, const char *haystack);
+int countDigitsInSum(int x, int y);
 #endif //UNTITLED1_BASICS_H

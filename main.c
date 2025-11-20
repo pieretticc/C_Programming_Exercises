@@ -1,8 +1,10 @@
 #include "basics.h"
+#include "algorithms.h"
 #include <stdio.h>
 int main() {
     /*
     //functions are commented and uncommented as needed to test
+    //basics.c
     printInfo();
     printVersion();
     bigprint();
@@ -68,10 +70,27 @@ int main() {
     printf("%d\n", isPrime(7284));
     listPrimePalindromes(50,1200);
     printf("%.2f",findAngle(6 , 15));
-    */
-    //createArray(7);
-    //printArray(createArray(7),7);
+    createArray(7);
+    printArray(createArray(7),7);
     printArray(fixArray(createArray(7),7),7);
-
+    int size = 7;
+    int *testArray = createArray(size);
+    printf("Array size: %zu\n", *testArray); //returns 1
+    size_t arraySize = sizeof(testArray);
+    printf("Array size: %zu\n", arraySize); //returns 8
+    //replaceFirstElementArray(testArray, size, 5);
+    //printArray(testArray, size);
+    int size = 7;
+    int *testArray = createArray(size);
+    printPositionsArrayElements(testArray, size);
+    int size = 5;
+    int *testArray = (createArray(size));
+    printf("smallest value is: %d", smallestArrayValue(testArray, size));
+    char string1[] = "qwerty";
+    char string2[] = "easyboutqwerty";
+    printf("%d",checkifSubstring(string1, string2));
+    printf("%d", countDigitsInSum(68, 75));
+    */
+    test();
     return 0;
 }

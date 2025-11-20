@@ -5,4 +5,6 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(untitled1 main.c
         basics.c
-        basics.h)
+        basics.h
+        algorithms.c
+        algorithms.h)

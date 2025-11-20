@@ -770,6 +770,57 @@ int *fixArray(int *array, int size) {
     return array;
 }
 
-
-
-
+int *replaceFirstElementArray(int *array, int size, int firstNum) {
+    //125
+    for (int i = 0; i < size; i++) {
+        if (i == 0) {
+            array[i] = firstNum;
+        } else {
+            array[i] = array[i-1]  * 2;
+        }
+    }
+    return array;
+}
+void printPositionsArrayElements(int *array, int size) {
+    //126
+    printf("Array positions that store a value less or equal to 0:\n");
+    for (int i = 0; i < size; i++) {
+        if (array[i] <= 0) {
+            printf("array[%d] = %d \n",i, array[i]);
+        }
+    }
+    removeArray(array);
+}
+int smallestArrayValue(int *array, int size) {
+    //130
+    int smallest = array[0];
+    for (int i = 0 ; i < size; i++) {
+        if (array[i] < smallest) {
+            smallest = array[i];
+        }
+    }
+    return smallest;
+}
+int checkifSubstring(const char *needle, const char *haystack) {
+    //131
+    for (int i = 0; haystack[i] != '\0'; i++) {
+        int j = 0;
+        while (needle[j] == haystack[i+j] && needle[j] != '\0') {
+            j++;
+        }
+        if (needle[j] == '\0') {
+            return 1;
+        }
+    }
+    return 0;
+}
+int countDigitsInSum(int x, int y) {
+    //133
+    int digitCount = 0;
+    int numBeingCounted = x + y;
+    while (numBeingCounted != 0) {
+        numBeingCounted /= 10;
+        digitCount++;
+    }
+    return digitCount;
+}
