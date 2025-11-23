@@ -14,7 +14,7 @@ void printInfo(){
     //problem #1
     char name[17]= "Matthew Pieretti";
     char birthday[14] = "Jan 1st, 2000";
-    long long int mobile = 2155344104;
+    long long int mobile = 1234567890;
     printf("Name: %s\n", name);
     printf("DOB: %s\n", birthday);
     printf("Mobile: %lld\n", mobile);

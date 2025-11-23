@@ -90,7 +90,32 @@ int main() {
     char string2[] = "easyboutqwerty";
     printf("%d",checkifSubstring(string1, string2));
     printf("%d", countDigitsInSum(68, 75));
+    //algorithms.c
+    printf("%d", sumOrTriple(2,2));
+    printf("absolute diff from 51: %d\n", absoluteDifferenceFrom51(2));
+    printf("absolute diff from 51: %d\n", absoluteDifferenceFrom51(51));
+    printf("absolute diff from 51: %d\n", absoluteDifferenceFrom51(550));
+    printf("Testing 30s value: %s\n", check30s(20,50) ? "true" : "false");
+    printf("Testing 30s value: %s\n", check30s(30,30) ? "true" : "false");
+    printf("Checking if near 100 or 200: %s\n", checkIfNear(99) ? "true" : "false");
+    printf("Checking if near 100 or 200: %s\n", checkIfNear(109) ? "true" : "false");
+    printf("Checking if near 100 or 200: %s\n", checkIfNear(199) ? "true" : "false");
+    printf("Checking if near 100 or 200: %s\n", checkIfNear(205) ? "true" : "false");
+    printf("Checking if near 100 or 200: %s\n", checkIfNear(50) ? "true" : "false");
+    printf("Checking if near 100 or 200: %s\n", checkIfNear(999) ? "true" : "false");
+    printf("temperature check: %s\n", tempCheck(-1, 109) ? "true" : "false");
+    printf("temperature check: %s\n", tempCheck(10, 109) ? "true" : "false");
+    printf("temperature check: %s\n", tempCheck(10, 99) ? "true" : "false");
+    printf("temperature check: %s\n", tempCheck(-16, 109) ? "true" : "false");
+    printf("range check: %s\n", checkRange100to200(220, 330) ? "true" : "false");
+    printf("range check: %s\n", checkRange100to200(50, 150) ? "true" : "false");
+    printf("triple range check: %s\n", tripleRangeCheck(20, 30, 40) ? "true" : "false");
+    printf("triple range check: %s\n", tripleRangeCheck(200, 300, 400) ? "true" : "false");
+    printf("Value closest to 100: %d\n", closestTo100(65, 65));
+    printf("both numbers within 40-50 OR 50-60: %s\n", dualRangeCheck(55, 60) ? "true" : "false");
+    printf("larger number if one is from 20 - 30 : %d\n", rangeWithLargest(44, 55));
+    printf("same last digit: %s\n", sameLastDigit(44, 104) ? "true" : "false");
     */
-    test();
+
     return 0;
 }
