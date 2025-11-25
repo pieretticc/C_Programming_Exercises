@@ -152,7 +152,19 @@ int main() {
     int x = 15;
     int y = 26;
     printf("conditional check of %d and %d: %d\n", x, y, conditionalLargerCheck(x, y));
+    printf("equal difference check: %s\n", equalDifferenceCheck(7,14,21) ? "equal" : "not equal");
+    printf("equal difference check: %s\n", equalDifferenceCheck(7,14,22) ? "equal" : "not equal");
     */
+
+
+    int arr_good[] = { 999, 1, 2, 3, 4, 4 ,4,4,4,4,4,4,4,999 };
+    int arr_good_size = sizeof(arr_good) / sizeof(arr_good[0]);
+    int arr_bad[] = { 4, 1, 2, 3, 17 };
+    int arr_bad_size = sizeof(arr_bad) / sizeof(arr_bad[0]);
+    printf("equal array start and end check: %s\n", firstLastEqual(arr_good, arr_good_size) ? "equal" : "not equal");
+    printf("equal array start and end check: %s\n", firstLastEqual(arr_bad, arr_bad_size) ? "equal" : "not equal");
+    printf("Sum of array equals: %d\n", arraySum(arr_good, arr_good_size));
+
 
 
     return 0;

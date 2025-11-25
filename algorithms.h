@@ -20,7 +20,7 @@ int rangeWithLargest(int a, int b);
 bool sameLastDigit(int x, int y);
 bool sequenceChecker(int *array, int arraySize);
 int countAdjacent5s(int *array, int arraySize);
-bool tripleChecker(const int *array, const int arraySize);
+bool tripleChecker(const int *array, int arraySize);
 int sumChecker(int x, int y);
 bool checkSumDiff5(int x, int y);
 bool multiple13checker(int x);
@@ -29,5 +29,10 @@ bool nearMultiple10Checker(int x);
 bool threeIntSumMatch(int x, int y, int z);
 bool comparativeCheckThreshold20(int x, int y, int z);
 int conditionalLargerCheck(int x, int y);
-
+int computeConditionalSum(int x, int y, int z);
+int computeSumNo13s(int x, int y, int z);
+int nearestTo13(int x, int y);
+bool equalDifferenceCheck(int small, int medium, int large);
+bool firstLastEqual(int* array, int arraySize);
+int arraySum(int *array, int arraySize);
 #endif //UNTITLED1_ALGORITHMS_H

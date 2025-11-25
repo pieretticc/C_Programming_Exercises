@@ -215,3 +215,79 @@ int conditionalLargerCheck(int x, int y) {
     }
     return y;
 }
+int computeConditionalSum(int x, int y, int z) {
+    //29
+    if (x == y) {
+        return z;
+    }
+    if (z == x) {
+        return y;
+    }
+    if (y == z) {
+        return x;
+    }
+    return x + y + z;
+}
+
+int computeSumNo13s(int x, int y, int z) {
+    //30
+    if (x == 13) {
+        return y+z;
+    }
+    if (y == 13) {
+        return x+z;
+    }
+    if (z == 13) {
+        return x+y;
+    }
+    return x + y + z;
+}
+
+int nearestTo13(int x, int y) {
+    //32
+    if (x > 13 && y > 13) {
+        return 0;
+    }
+    if (x <= 13 && y > 13) {
+        return x;
+    }
+    if (y <= 13 && x > 13) {
+        return y;
+    }
+    return x > y ? x : y;
+}
+bool equalDifferenceCheck(int small, int medium, int large) {
+    //33
+    if (abs(small - medium) == abs(medium - large)) {
+        return true;
+    }
+    return false;
+}
+
+bool firstLastEqual(int* array, int arraySize) {
+    //34
+    if (array[0] == array[arraySize-1]) {
+        return true;
+    }
+    return false;
+}
+
+bool twoArraysFirstLastCheck(int *array1, int array1Size, int *array2, int array2Size) {
+    //35
+    if (array1[0] == array2[0] || array1[array1Size-1] == array2[array2Size-1]) {
+        return true;
+    }
+    return false;
+}
+
+int arraySum(int *array, int arraySize) {
+    //36
+    int result = 0;
+    for (int i = 0; i < arraySize; i++) {
+        result += array[i];
+    }
+    return result;
+}
+int *leftRotate(int *array, int arraySize, int key) {
+
+}
