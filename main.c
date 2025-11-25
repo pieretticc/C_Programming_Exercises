@@ -115,7 +115,45 @@ int main() {
     printf("both numbers within 40-50 OR 50-60: %s\n", dualRangeCheck(55, 60) ? "true" : "false");
     printf("larger number if one is from 20 - 30 : %d\n", rangeWithLargest(44, 55));
     printf("same last digit: %s\n", sameLastDigit(44, 104) ? "true" : "false");
+
+    //int *testArray1 = createArray(10);
+    //int testArraySize = sizeof(testArray1) / sizeof(testArray1[0]);
+    int arr_empty[] = { };
+    int arr_empty_size = sizeof(arr_empty);
+    int arr_single[] = { 42 };
+    int arr_single_size = sizeof(arr_single) / sizeof(arr_single[0]);
+    int arr_small[]  = { 3, 1 };
+    int arr_small_size = sizeof(arr_small) / sizeof(arr_small[0]);
+    int arr_neg[]    = { -5, -1, -3, 2 };
+    int arr_neg_size = sizeof(arr_neg) / sizeof(arr_neg[0]);
+    int arr_stress[] = {2147483647, -2147483648, 0, 1024, -1024 };
+    int arr_stress_size = sizeof(arr_stress) / sizeof(arr_stress[0]);
+    int arr_good[] = { 4, 1, 2, 3, 5 };
+    int arr_good_size = sizeof(arr_good) / sizeof(arr_good[0]);
+
+    printf("arr_empty: %s\n",sequenceChecker(arr_empty, arr_empty_size) ? "true" : "false");
+    printf("arr_single: %s\n",sequenceChecker(arr_single, arr_single_size) ? "true" : "false");
+    printf("arr_small: %s\n",sequenceChecker(arr_small, arr_small_size) ? "true" : "false");
+    printf("arr_neg: %s\n",sequenceChecker(arr_neg, arr_neg_size) ? "true" : "false");
+    printf("arr_stress: %s\n",sequenceChecker(arr_stress, arr_stress_size) ? "true" : "false");
+    printf("arr_good: %s\n",sequenceChecker(arr_good, arr_good_size) ? "true" : "false");
+    //removeArray(testArray1);
+
+    printf("check if sum or diff is 5: %s\n",checkSumDiff5(2, 3) ? "true" : "false");
+    printf("check if sum or diff is 5: %s\n",checkSumDiff5(5, 0) ? "true" : "false");
+    printf("check if sum or diff is 5: %s\n",checkSumDiff5(12, 32) ? "true" : "false");
+    printf("check if sum or diff is 5: %s\n",checkSumDiff5(267, 3432432) ? "true" : "false");
+
+    printf("XOR check if divisible by 3 and 7: %s\n",xorMultipleChecker(6) ? "true" : "false");
+    printf("XOR check if divisible by 3 and 7: %s\n",xorMultipleChecker(14) ? "true" : "false");
+    printf("XOR check if divisible by 3 and 7: %s\n",xorMultipleChecker(21) ? "true" : "false");
+    printf("XOR check if divisible by 3 and 7: %s\n",xorMultipleChecker(28) ? "true" : "false");
+    printf("check if in range of multiple of 10: %s\n",nearMultiple10Checker(27) ? "true" : "false");
+    int x = 15;
+    int y = 26;
+    printf("conditional check of %d and %d: %d\n", x, y, conditionalLargerCheck(x, y));
     */
+
 
     return 0;
 }

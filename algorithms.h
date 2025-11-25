@@ -18,4 +18,16 @@ int closestTo100(int x, int y);
 bool dualRangeCheck(int x, int y);
 int rangeWithLargest(int a, int b);
 bool sameLastDigit(int x, int y);
+bool sequenceChecker(int *array, int arraySize);
+int countAdjacent5s(int *array, int arraySize);
+bool tripleChecker(const int *array, const int arraySize);
+int sumChecker(int x, int y);
+bool checkSumDiff5(int x, int y);
+bool multiple13checker(int x);
+bool xorMultipleChecker(int x);
+bool nearMultiple10Checker(int x);
+bool threeIntSumMatch(int x, int y, int z);
+bool comparativeCheckThreshold20(int x, int y, int z);
+int conditionalLargerCheck(int x, int y);
+
 #endif //UNTITLED1_ALGORITHMS_H

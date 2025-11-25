@@ -101,12 +101,117 @@ bool sameLastDigit(int x, int y) {
     return x == y;
 }
 
-bool sequenceChecker(int *array) {
-
+bool sequenceChecker(int *array, int arraySize) {
+    //14
+    if (arraySize < 3) {
+        return false;
+    }
+    for (int i = 0; i < arraySize - 2; i++) {
+    //    printf("Array[%d] = %d\n", i, array[i]);
+        if (array[i] == 1 && array[i + 1] == 2 && array[i + 2] == 3) {
+        //    printf("Sequence found!\n");
+            return true;
+        }
+    }
+    return false;
+}
+int countAdjacent5s(int *array, int arraySize) {
+    //15
+    int count = 0;
+    if (arraySize < 1) {
+        return 0;
+    }
+    for (int i = 0; i < arraySize - 1; i++) {
+        if (array[i] == 5 && (array[i+1] == 5 || array[i+1] == 6)) {
+            count++;
+        }
+    }
+    return count;
 }
 
+bool tripleChecker(const int *array, const int arraySize) {
+    //16
+    if (arraySize < 3) {
+        return false;
+    }
+    for (int i = 0; i < arraySize - 2; i++) {
+        if (array[i] == array[i + 1] && array[i + 1] == array[i + 2]) {
+            return true;
+        }
+    }
+    return false;
+}
+int sumChecker(const int x, const int y) {
+    //17
+    int sum = x + y;
+    if (sum >= 10 && sum <= 20) {
+        return 30;
+    }
+    return sum;
+}
 
+bool checkSumDiff5(const int x, const int y) {
+    //18
+    if (x == 5 || y == 5|| x+y==5 || x-y==5 ) {
+        return true;
+    }
+    return false;
+}
 
+bool multiple13checker(const int x) {
+    //19
+    if (x % 13 == 0 || x % 13 == 1) {
+        return true;
+    }
+    return false;
+}
 
+bool xorMultipleChecker(const int x) {
+    //20
+    return (x % 3 == 0) ^ (x % 7 == 0);
+}
 
-
+bool nearMultiple10Checker(const int x) {
+    //21
+    if (x % 10 >= 8 || x % 10 <= 2 ) {
+        return true;
+    }
+    return false;
+}
+int sumSpecialRangeOverride(const int x, const int y) {
+    //22
+    if ((x >= 10 && x <= 20) || (y >= 10 && y <= 20)) {
+        return 18;
+    }
+    return x+y;
+}
+bool threeIntSumMatch(int x, int y, int z) {
+    //23
+    if (x + y == z || y + z == x || z + x == y) {
+        return true;
+    }
+    return false;
+}
+bool comparativeCheckThreshold20(int x, int y, int z) {
+    //24
+    if ((x >=20 && x < y ||x >=20 && x < z) || (y >=20 && y < x || y >=20 && y < z) || (z >=20 && z < x || z >=20 && z < y)) {
+        return true;
+    }
+    return false;
+}
+int conditionalLargerCheck(int x, int y) {
+    //27
+    if (x == y) {
+        return 0;
+    }
+    if (x % 5 == y % 5) {
+        if (x > y) {
+            return y;
+        }
+        return x;
+    }
+    if (x > y) {
+        return x;
+    }
+    return y;
+}
