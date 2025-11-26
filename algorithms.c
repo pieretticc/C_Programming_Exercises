@@ -289,5 +289,126 @@ int arraySum(int *array, int arraySize) {
     return result;
 }
 int *leftRotate(int *array, int arraySize, int key) {
+    //37
+    int count = 0;
+    while (count < key) {
+        int temp = array[0];
+        for (int i = 0; i < arraySize - 1; i++) {
+            array[i] = array[i+1];
+        }
+        array[arraySize-1] = temp;
+        count++;
+    }
+    return array;
+}
 
+int *invertArray(int *array, int arraySize) {
+    //38
+    int left = 0;
+    int right = arraySize - 1;
+    int temp;
+    if (arraySize == 0) {
+        return array;
+    }
+    while (left <= right) {
+        temp = array[left];
+        array[left] = array[right];
+        array[right] = temp;
+        left++;
+        right--;
+    }
+    return array;
+}
+
+void printFirstLast(int *array, int arraySize) { //void since I dont want to return a locally declared array
+    //40
+   printf("First element: %d\n Second element: %d\n", array[0], array[arraySize-1]);
+}
+
+bool contains10or20Twice(int *array, int arraySize) {
+    //43
+    int tens = 0;
+    int twenties = 0;
+    for (int i = 0; i < arraySize - 1; i++) {
+        if (array[i] == 10) {
+            tens++;
+        }
+        if (array[i] == 20) {
+            twenties++;
+        }
+    }
+    return (tens == 2 || twenties == 2);
+}
+bool contains3or5(int *array, int arraySize) {
+    //58
+    for (int i = 0; i < arraySize; i++) {
+        if (array[i] == 5 || array[i] == 3) {
+            return true;
+        }
+    }
+    return false;
+}
+bool checkAdjacentEvenOdd(int *array, int arraySize) {
+    //63
+    for (int i = 0; i < arraySize - 1; i++) {
+        if (array[i] % 2 == 0 && array[i+1] % 2 == 0) {
+            return true;
+        }
+        if (array[i] % 2 == 1 && array[i+1] % 2 == 1) {
+            return true;
+        }
+    }
+    return false;
+}
+int *shiftZerosLeft(int *array, int arraySize) {
+    //71
+    int position = 0;
+    int temp;
+    for (int i = 0; i < arraySize; i++) {
+        if (array[i] == 0) {
+            temp = array[position];
+            array[position] = array[i];
+            array[i] = temp;
+            position++;
+        }
+    }
+    return array;
+}
+int *shiftRightAndReplace(int *array, int arraySize) { //replaces 5s with 0s
+    //72
+    int position = arraySize - 1;
+    int temp;
+    for (int i = arraySize; i > 0; i--) {
+        if (array[i] == 0) {
+            temp = array[position];
+            array[position] = array[i];
+            array[i] = temp;
+            position--;
+        }
+        else if (array[i] == 5) {
+            array[i] = 0;
+        }
+    }
+    return array;
+}
+bool checkNonDecreasing(int *array, int arraySize) {
+    //74
+    for (int i = 0; i < arraySize - 1; i++) {
+        if (array[i] > array[i+1]) {
+            return false;
+        }
+    }
+    return true;
+}
+bool check15s(int *array, int arraySize) {
+    //75
+    if (arraySize < 2) {
+        return false;
+    }
+    for (int i = 0; i < arraySize - 1; i++) {
+        if (array[i] == 15 && array[i+1] == 15) {
+            return false;
+        }
+    }
+    return false;
 }

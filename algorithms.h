@@ -35,4 +35,10 @@ int nearestTo13(int x, int y);
 bool equalDifferenceCheck(int small, int medium, int large);
 bool firstLastEqual(int* array, int arraySize);
 int arraySum(int *array, int arraySize);
+int *leftRotate(int *array, int arraySize, int key);
+int *invertArray(int *array, int arraySize);
+void printFirstLast(int *array, int arraySize);
+bool contains10or20Twice(int *array, int arraySize);
+int *shiftZerosLeft(int *array, int arraySize);
+int *shiftRightAndReplace(int *array, int arraySize);
 #endif //UNTITLED1_ALGORITHMS_H

@@ -157,15 +157,25 @@ int main() {
     */
 
 
-    int arr_good[] = { 999, 1, 2, 3, 4, 4 ,4,4,4,4,4,4,4,999 };
+
+    int arr_good[] = { 999, 1, 2, 3, 0, 4, 0, 4 ,4,4, 0,4,4,4, 0,4,4, 0, 999 };
     int arr_good_size = sizeof(arr_good) / sizeof(arr_good[0]);
-    int arr_bad[] = { 4, 1, 2, 3, 17 };
+    int arr_bad[] = { 0, 4, 1, 2, 3, 10, 20, 17, 0 };
     int arr_bad_size = sizeof(arr_bad) / sizeof(arr_bad[0]);
-    printf("equal array start and end check: %s\n", firstLastEqual(arr_good, arr_good_size) ? "equal" : "not equal");
-    printf("equal array start and end check: %s\n", firstLastEqual(arr_bad, arr_bad_size) ? "equal" : "not equal");
-    printf("Sum of array equals: %d\n", arraySum(arr_good, arr_good_size));
-
-
+//    printf("equal array start and end check: %s\n", firstLastEqual(arr_good, arr_good_size) ? "equal" : "not equal");
+//    printf("equal array start and end check: %s\n", firstLastEqual(arr_bad, arr_bad_size) ? "equal" : "not equal");
+//    printf("Sum of array equals: %d\n", arraySum(arr_good, arr_good_size));
+    printArray(arr_good, arr_good_size);
+    printArray(arr_bad, arr_bad_size);
+//    printArray(leftRotate(arr_good, arr_good_size, 1), arr_good_size);
+//    printArray(invertArray(arr_good, arr_good_size), arr_good_size);
+//    printf("array contains 10 twice or 20 twice: %s\n",contains10or20Twice(arr_bad, arr_bad_size) ? "true" : "false");
+    printf("Arrays with zeros shifted left: \n");
+    printArray(shiftZerosLeft(arr_good, arr_good_size), arr_good_size);
+    printArray(shiftZerosLeft(arr_bad, arr_bad_size), arr_bad_size);
+    printf("Arrays with zeros shifted right and fives replaced: \n");
+    printArray(shiftRightAndReplace(arr_good, arr_good_size), arr_good_size);
+    printArray(shiftRightAndReplace(arr_bad, arr_bad_size), arr_bad_size);
 
     return 0;
 }
