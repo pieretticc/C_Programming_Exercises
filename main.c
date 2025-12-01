@@ -1,5 +1,6 @@
 #include "basics.h"
 #include "algorithms.h"
+#include "structure.h"
 #include <stdio.h>
 int main() {
     /*
@@ -154,10 +155,6 @@ int main() {
     printf("conditional check of %d and %d: %d\n", x, y, conditionalLargerCheck(x, y));
     printf("equal difference check: %s\n", equalDifferenceCheck(7,14,21) ? "equal" : "not equal");
     printf("equal difference check: %s\n", equalDifferenceCheck(7,14,22) ? "equal" : "not equal");
-    */
-
-
-
     int arr_good[] = { 999, 1, 2, 3, 0, 4, 0, 4 ,4,4, 0,4,4,4, 0,4,4, 0, 999 };
     int arr_good_size = sizeof(arr_good) / sizeof(arr_good[0]);
     int arr_bad[] = { 0, 4, 1, 2, 3, 10, 20, 17, 0 };
@@ -176,6 +173,9 @@ int main() {
     printf("Arrays with zeros shifted right and fives replaced: \n");
     printArray(shiftRightAndReplace(arr_good, arr_good_size), arr_good_size);
     printArray(shiftRightAndReplace(arr_bad, arr_bad_size), arr_bad_size);
+*/
 
+    struct Student matthew = createStudent("Matthew", 25, 91.0);
+    printf("%s | %d | %2f\n", matthew.name, matthew.age, matthew.gradeAvg);
     return 0;
 }

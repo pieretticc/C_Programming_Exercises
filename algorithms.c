@@ -6,6 +6,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include <stdlib.h>
 
 int sumOrTriple(int x, int y) {
     //1

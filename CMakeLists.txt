@@ -7,4 +7,6 @@ add_executable(untitled1 main.c
         basics.c
         basics.h
         algorithms.c
-        algorithms.h)
+        algorithms.h
+        structure.c
+        structure.h)
